@@ -1,6 +1,7 @@
 'use client';
 
 import { FormEvent } from 'react';
+import Link from 'next/link'; // added
 
 export default function LoginPage() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -52,6 +53,14 @@ export default function LoginPage() {
         >
           Login
         </button>
+
+        {/* Register link */}
+        <p className="mt-4 text-center text-sm">
+          Don&apos;t have an account?{' '}
+          <Link href="/register" className="text-blue-600 hover:underline">
+            Register
+          </Link>
+        </p>
       </form>
     </div>
   );
